@@ -1,5 +1,5 @@
 # aug-bot-twitter
-_Author:_ Jonathan Finger
+_Author:_ Jonathan Finger  
 _Start Date:_ 02/07/2022
 
 # Project Summary
