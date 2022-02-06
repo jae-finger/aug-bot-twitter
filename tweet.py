@@ -3,6 +3,7 @@
 import tweepy
 import os
 from rich import print
+from datetime import date
 
 # Get Augie Facts
 # from augie_facts import augie_facts
@@ -35,6 +36,15 @@ access_token_secret = os.getenv("TW_ACCESS_TOKEN_SECRET")
 
 
 if __name__ == '__main__':
-    print(consumer_key, consumer_secret, access_token, access_token_secret)
-#     print('Getting a random fact...')
-#     AugieFact(consumer_key, consumer_secret, access_token, access_token_secret)
+    # Set Authentication
+    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+    auth.set_access_token(access_token, access_token_secret)
+
+    # Instantiate Tweepy API
+    api = tweepy.API(auth)
+
+    test_tweet = f'Test tweet on : {date.today()}'
+
+    # api.update_status(test_tweet)
+
+
